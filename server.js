@@ -16,9 +16,7 @@ app.get("/", async (req, res) => {
       .status(200)
       .json({ success: false, data: [], error: "Empty file params" });
   }
-
-  console.log(file_url);
-
+  
   try {
     const response = await fetch(decodeURIComponent(file_url));
 
